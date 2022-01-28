@@ -370,7 +370,8 @@ router.post('/assets/views/job_alerts2/create-1', function (req, res) {
     let applicationName = applications[applicationId].firstname + " " + applications[applicationId].lastname
     let flashContent = "<h3 class='govuk-notification-banner__heading'>" + applicationName+ " has been invited to interview</h3><p class='govuk-body'>They will receive an email containing the interview details.</p>"
 
-    application.status = "Invited to interview"
+    application.status = "Invited to interview - Yet to confirm"
+
 
     res.redirect(`/prototypes/application/expanded/dashboard/job/${jobId}/applicant/${applicationId}/?_flash=${flashContent}`)
     
